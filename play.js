@@ -22,7 +22,7 @@ const connect = function () {
   });
 
   conn.on("connect", () => {
-    console.log("Still connected");
+    console.log("Still connected!");
   });
 
   // interpret incoming data as text
