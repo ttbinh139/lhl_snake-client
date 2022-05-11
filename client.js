@@ -11,7 +11,7 @@ const connect = function () {
   });
 
   conn.on("connect", () => {
-    console.log("Still connected!");
+    conn.write("Name: ___");
   });
 
   // interpret incoming data as text
