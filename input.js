@@ -26,8 +26,11 @@ const handleUserInput = function (key) {
   } else if (key === "d") {
     connection.write("Move: right");
     //console.log("Move right", key);
+  } else if(key === "h"){ // special key
+    console.log("Send message with key: ", key);
+    connection.write("Say: HMN");
   } else {
-    console.log("Normal key");
+    console.log("Normal keywords");
   }
 };
 
