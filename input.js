@@ -1,3 +1,4 @@
+const {MOVE_UP_KEY, MOVE_DOWN_KEY, MOVE_LEFT_KEY, MOVE_RIGHT_KEY, SPEC_KEY} = require('./constants');
 let connection;
 
 const setupInput = function (conn) {
@@ -13,20 +14,20 @@ const setupInput = function (conn) {
 const handleUserInput = function (key) {
   if (key === '\u0003') {
     process.exit();
-  } else if (key === "w") {
-    console.log(connection);
+  } else if (key === MOVE_UP_KEY) {
+    //console.log(connection);
     connection.write("Move: up");
     //console.log("Move Up", key);
-  } else if (key === "a") {
+  } else if (key === MOVE_LEFT_KEY) {
     connection.write("Move: left");
     //console.log("Move left", key);
-  } else if (key === "s") {
+  } else if (key === MOVE_DOWN_KEY) {
     connection.write("Move: down");
     //console.log("Move down", key);
-  } else if (key === "d") {
+  } else if (key === MOVE_RIGHT_KEY) {
     connection.write("Move: right");
     //console.log("Move right", key);
-  } else if(key === "h"){ // special key
+  } else if(key === SPEC_KEY){ // special key
     console.log("Send message with key: ", key);
     connection.write("Say: HMN");
   } else {
