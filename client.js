@@ -16,7 +16,7 @@ const connect = function () {
 
   conn.on("connect", () => {
     
-      for( i = 1; i < 20; i++) {
+     /*  for( i = 1; i < 20; i++) {
         setTimeout(function(){
           conn.write("Move: up");
         }, i*500);
@@ -32,7 +32,7 @@ const connect = function () {
         setTimeout(function(){
           conn.write("Move: right");
         }, (i + 18)*500);
-      }
+      } */
     
   });
 
